@@ -1,0 +1,29 @@
+spring:
+    profiles: prod
+name: prod-YAML
+environment: production
+ericssonSubscriberUrl: http://69.76.117.195:5927/v2/subscribers/search
+ericssonSubscriberAdTagUrl: http://69.76.122.22:5928/v1/home
+ericssonSubscriberSeriesUrl: http://peakview-fe-prod.timewarnercable.com:5927/v2/series_recordings
+ericssonSubscriberRecordingUrl: http://peakview-fe-prod.timewarnercable.com:5927/v2/subscribers/recordings
+ericssonDeleteRecordingUrl: http://69.76.117.195:5927/v2/recordings/delete
+ericssonDeleteSeriesUrl: http://69.76.117.195:5927/v2/series_recordings
+cdvrCsBaseUrl: http://10.0.2.15:25100/cs/v3
+cdvrSmsBaseUrl: http://10.0.2.15:25130/sms/v3
+numThreads: 10
+ 
+---
+spring:
+    profiles: test
+name: test-YAML
+environment: test
+ericssonSubscriberUrl: http://10.0.2.15:8089/v2/subscribers/search
+ericssonSubscriberAdTagUrl: http://10.0.2.15:8089/v1/home
+ericssonSubscriberSeriesUrl: http://10.0.2.15:8090/v2/series_recordings
+ericssonSubscriberRecordingUrl: http://10.0.2.15:8091/v2/subscribers/recordings
+ericssonDeleteRecordingUrl: http://69.76.110.4:5927/v2/recordings/delete
+ericssonDeleteSeriesUrl: http://69.76.110.4:5927/v2/series_recordings
+cdvrCsBaseUrl: http://10.0.2.15:25100/cs/v3
+cdvrSmsBaseUrl: http://10.0.2.15:25130/sms/v3
+numThreads: 2
+

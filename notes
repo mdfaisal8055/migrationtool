@@ -1,0 +1,39 @@
+//final
+docker run -d -p 8080:8080 -e "SPRING_PROFILES_ACTIVE=test" -e "ericssonSubscriberUrl=http://10.0.2.15:8089/v2/subscribers/search" -e "ericssonSubscriberAdTagUrl=http://10.0.2.15:8089/v1/home" -e "ericssonSubscriberSeriesUrl=http://10.0.2.15:8090/v2/series_recordings" -e "ericssonSubscriberRecordingUrl=http://10.0.2.15:8091/v2/subscribers/recordings" -e "cdvrCsBaseUrl=http://10.0.2.15:25100/cs/v3" -e "cdvrSmsBaseUrl=http://10.0.2.15:25130/sms/v3" --name migrationtool migrationtooltest
+ 
+ docker run -d -p 8080:8080 -e "ericssonSubscriberUrl=http://10.0.2.15:8089/v2/subscribers/search" -e "ericssonSubscriberAdTagUrl=http://10.0.2.15:8089/v1/home" -e "ericssonSubscriberSeriesUrl=http://10.0.2.15:8090/v2/series_recordings" -e "ericssonSubscriberRecordingUrl=http://10.0.2.15:8091/v2/subscribers/recordings" -e "cdvrCsBaseUrl=http://10.0.2.15:25100/cs/v3" -e "cdvrSmsBaseUrl=http://10.0.2.15:25130/sms/v3" --name migrationtool migrationtooltest
+ 
+ //final
+docker run -d -p 8080:8080 -e "SPRING_PROFILES_ACTIVE=prod" --name migrationtool migrationtooltest 
+
+
+
+
+
+docker run --name localmigrationtool -e ericssonSubscriberUrl: 'http://69.76.117.195:5927/v2/subscribers/search' -e ericssonSubscriberAdTagUrl: 'http://69.76.122.22:5928/v1/home' -e ericssonSubscriberSeriesUrl: 'http://69.76.110.4:5927/v2/series_recordings' -e ericssonSubscriberRecordingUrl: 'http://peakview-fe-prod.timewarnercable.com:5927/v2/subscribers/recordings'
+-e ericssonDeleteRecordingUrl: 'http://69.76.110.4:5927/v2/recordings/delete'
+-e ericssonDeleteSeriesUrl: 'http://69.76.110.4:5927/v2/series_recordings'
+-e cdvrCsBaseUrl: 'http://localhost:25100/cs/v3'
+-e cdvrSmsBaseUrl: 'http://localhost:25130/sms/v3' -p 8080:8080 migrationtest 
+
+
+
+
+
+
+docker run --name migrationtool -e ericssonSubscriberUrl: 'http://69.76.117.195:5927/v2/subscribers/search' 
+-e ericssonSubscriberAdTagUrl: 'http://69.76.122.22:5928/v1/home'
+-e ericssonSubscriberSeriesUrl: 'http://69.76.110.4:5927/v2/series_recordings'
+-e ericssonSubscriberRecordingUrl: 'http://peakview-fe-prod.timewarnercable.com:5927/v2/subscribers/recordings'
+-e ericssonDeleteRecordingUrl: 'http://69.76.110.4:5927/v2/recordings/delete'
+-e ericssonDeleteSeriesUrl: 'http://69.76.110.4:5927/v2/series_recordings'
+-e cdvrCsBaseUrl: 'http://localhost:25100/cs/v3'
+-e cdvrSmsBaseUrl: 'http://localhost:25130/sms/v3' -p 26100:8080 -d
+    local/migrationtool:v003
+
+
+
+mvn package docker:build -t 460570964411.dkr.ecr.us-west-2.amazonaws.com/migrationtool
+
+docker run -p 8080:8080 --name=migrationtool -t 460570964411.dkr.ecr.us-west-2.amazonaws.com/migrationtool
+
