@@ -1,0 +1,1085 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<con:soapui-project id="ea13b3bb-48e2-466e-bbb1-deb4161ec825" activeEnvironment="Default" name="EricssonServer" resourceRoot="" soapui-version="5.3.0" abortOnError="false" runType="SEQUENTIAL" xmlns:con="http://eviware.com/soapui/config"><con:settings/><con:interface xsi:type="con:RestService" id="e9c7a482-7fa9-47a9-acd1-07a2c4b92f9c" wadlVersion="http://wadl.dev.java.net/2009/02" name="http://localhost:8080" type="rest" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"><con:settings/><con:definitionCache/><con:endpoints><con:endpoint>http://amohmmed-VirtualBox:8089/</con:endpoint><con:endpoint>http://localhost:8080</con:endpoint></con:endpoints><con:resource name="Search" path="/v2/subscribers/search" id="c09c9b61-93fc-4f73-8862-d10825ea84d1"><con:settings/><con:parameters/><con:method name="Search 1" id="1f6b8db3-346b-4e99-aed1-0258de760c08" method="GET"><con:settings/><con:parameters/><con:request name="Request 1" id="33c431ff-bdc1-46e4-b47e-5fa3033aae01" mediaType="application/json"><con:settings/><con:endpoint>http://localhost:8080</con:endpoint><con:request/><con:credentials><con:authType>No Authorization</con:authType></con:credentials><con:jmsConfig JMSDeliveryMode="PERSISTENT"/><con:jmsPropertyConfig/><con:parameters/></con:request></con:method></con:resource></con:interface><con:restMockService id="55cc0c11-fb32-4ea9-a36b-0781b71137ed" port="8089" path="/" host="amohmmed-VirtualBox" name="Subcribers"><con:settings/><con:properties/><con:restMockAction name="/v2/subscribers/search" method="GET" resourcePath="/v2/subscribers/search" id="c5d7d4c1-35f0-4f93-bad5-fde29709a5c6"><con:settings/><con:defaultResponse xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:dispatchPath>/*
+// Script dispatcher is used to select a response based on the incoming request.
+// Here are few examples showing how to match based on path, query param, header and body
+
+// Match based on path
+def requestPath = mockRequest.getPath()
+log.info "Path: "+ requestPath
+
+if( requestPath.contains("json") )
+{
+    // return the name of the response you want to dispatch
+    return "JSON Response"
+}
+
+
+// Match based on query parameter
+def queryString = mockRequest.getRequest().getQueryString()
+log.info "QueryString: " + queryString
+
+if( queryString.contains("stockholm") )
+{
+    // return the name of the response you want to dispatch
+    return "Response Stockholm"
+}
+else if( queryString.contains("london") )
+{
+    // return the name of the response you want to dispatch
+    return "Response London"
+}
+
+
+// Match based on header
+def acceptEncodingHeaderList = mockRequest.getRequestHeaders().get("Accept-Encoding")
+log.info "AcceptEncoding Header List: " + acceptEncodingHeaderList
+
+if( acceptEncodingHeaderList.contains("gzip,deflate") )
+{
+    // return the name of the response you want to dispatch
+    return "GZiped Response"
+}
+
+
+// Match based on body
+def requestBody = mockRequest.getRequestContent()
+log.info "Request body: " + requestBody
+
+if( requestBody.contains("some data") )
+{
+    // return the name of the response you want to dispatch
+    return "Response N"
+}
+*/
+</con:dispatchPath><con:response name="Allsubcribers" id="e79cd3d4-5bb1-4ed4-9d37-025bda9fcdb4" httpResponseStatus="200"><con:settings/><con:responseContent><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<SearchSubscribersReply TotalResults="4">
+   <Subscribers>
+      <Subscriber HomeID="4E654G009851" GeoID="1" Type="2" Class="basic_50_h" State="2" StateChangeTime="2017-06-15T20:34:25Z">
+         <Members>
+            <Member />
+         </Members>
+      </Subscriber>
+      <Subscriber HomeID="4E654T010208" GeoID="1" Type="2" Class="basic_50_h" State="1" StateChangeTime="2017-06-15T20:34:46Z">
+         <Members>
+            <Member />
+         </Members>
+      </Subscriber>
+      <Subscriber HomeID="YY00D4451195" GeoID="1" Type="2" Class="basic_50_h" State="1" StateChangeTime="2017-06-15T20:34:56Z">
+         <Members>
+            <Member />
+         </Members>
+      </Subscriber>
+      <Subscriber HomeID="1GH33X051536" GeoID="1" Type="2" Class="basic_50_h" State="1" StateChangeTime="2017-06-15T20:35:08Z">
+         <Members>
+            <Member />
+         </Members>
+      </Subscriber>
+   </Subscribers>
+</SearchSubscribersReply>]]></con:responseContent></con:response></con:restMockAction><con:restMockAction name="/v1/home/1GH33X051536" method="GET" resourcePath="/v1/home/1GH33X051536" id="4744e767-87b6-4c76-8faf-3573cbabdd9f"><con:settings/><con:defaultResponse xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:dispatchPath>/*
+// Script dispatcher is used to select a response based on the incoming request.
+// Here are few examples showing how to match based on path, query param, header and body
+
+// Match based on path
+def requestPath = mockRequest.getPath()
+log.info "Path: "+ requestPath
+
+if( requestPath.contains("json") )
+{
+    // return the name of the response you want to dispatch
+    return "JSON Response"
+}
+
+
+// Match based on query parameter
+def queryString = mockRequest.getRequest().getQueryString()
+log.info "QueryString: " + queryString
+
+if( queryString.contains("stockholm") )
+{
+    // return the name of the response you want to dispatch
+    return "Response Stockholm"
+}
+else if( queryString.contains("london") )
+{
+    // return the name of the response you want to dispatch
+    return "Response London"
+}
+
+
+// Match based on header
+def acceptEncodingHeaderList = mockRequest.getRequestHeaders().get("Accept-Encoding")
+log.info "AcceptEncoding Header List: " + acceptEncodingHeaderList
+
+if( acceptEncodingHeaderList.contains("gzip,deflate") )
+{
+    // return the name of the response you want to dispatch
+    return "GZiped Response"
+}
+
+
+// Match based on body
+def requestBody = mockRequest.getRequestContent()
+log.info "Request body: " + requestBody
+
+if( requestBody.contains("some data") )
+{
+    // return the name of the response you want to dispatch
+    return "Response N"
+}
+*/
+</con:dispatchPath><con:response name="adtags_1GH33X051536" id="c7675634-c16d-45b2-83d8-10de4eafe55f" httpResponseStatus="200"><con:settings/><con:responseContent><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<GetHomeResponse>
+   <SchedulerContainer Class="basic_50_h" GeoID="1" HomeID="1GH33X051536" State="1" StateChangeTime="2017-06-15T20:35:08Z" Type="2">
+      <Metadata />
+      <Members>
+         <Member />
+      </Members>
+      <BoxStatus Occupied="0" QuotaType="minutes" Scheduled="0" Total="3000" />
+   </SchedulerContainer>
+   <ad_tags>
+      <ad_tag>default</ad_tag>
+   </ad_tags>
+</GetHomeResponse>]]></con:responseContent></con:response></con:restMockAction><con:restMockAction name="/v1/home/4E654G009851" method="GET" resourcePath="/v1/home/4E654G009851" id="956e8969-a3c5-4836-88af-5d53df32505f"><con:settings/><con:defaultResponse xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:dispatchPath>/*
+// Script dispatcher is used to select a response based on the incoming request.
+// Here are few examples showing how to match based on path, query param, header and body
+
+// Match based on path
+def requestPath = mockRequest.getPath()
+log.info "Path: "+ requestPath
+
+if( requestPath.contains("json") )
+{
+    // return the name of the response you want to dispatch
+    return "JSON Response"
+}
+
+
+// Match based on query parameter
+def queryString = mockRequest.getRequest().getQueryString()
+log.info "QueryString: " + queryString
+
+if( queryString.contains("stockholm") )
+{
+    // return the name of the response you want to dispatch
+    return "Response Stockholm"
+}
+else if( queryString.contains("london") )
+{
+    // return the name of the response you want to dispatch
+    return "Response London"
+}
+
+
+// Match based on header
+def acceptEncodingHeaderList = mockRequest.getRequestHeaders().get("Accept-Encoding")
+log.info "AcceptEncoding Header List: " + acceptEncodingHeaderList
+
+if( acceptEncodingHeaderList.contains("gzip,deflate") )
+{
+    // return the name of the response you want to dispatch
+    return "GZiped Response"
+}
+
+
+// Match based on body
+def requestBody = mockRequest.getRequestContent()
+log.info "Request body: " + requestBody
+
+if( requestBody.contains("some data") )
+{
+    // return the name of the response you want to dispatch
+    return "Response N"
+}
+*/
+</con:dispatchPath><con:response name="adtags_4E654G009851" id="6ae48d11-cebc-4014-9dff-fc7beb218fb2" httpResponseStatus="200"><con:settings/><con:responseContent><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<GetHomeResponse>
+   <SchedulerContainer Class="basic_50_h" GeoID="1" HomeID="4E654G009851" State="1" StateChangeTime="2017-06-15T20:35:08Z" Type="2">
+      <Metadata />
+      <Members>
+         <Member />
+      </Members>
+      <BoxStatus Occupied="0" QuotaType="minutes" Scheduled="0" Total="3000" />
+   </SchedulerContainer>
+   <ad_tags>
+    <ad_tag>68506</ad_tag>
+    <ad_tag>LNC-99</ad_tag>
+    <ad_tag>LNC</ad_tag>
+  </ad_tags>
+</GetHomeResponse>]]></con:responseContent></con:response></con:restMockAction><con:restMockAction name="/v1/home/YY00D4451195" method="GET" resourcePath="/v1/home/YY00D4451195" id="67cb9148-8c2c-44e1-b38f-d0d4f05f6447"><con:settings/><con:defaultResponse xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:dispatchPath>/*
+// Script dispatcher is used to select a response based on the incoming request.
+// Here are few examples showing how to match based on path, query param, header and body
+
+// Match based on path
+def requestPath = mockRequest.getPath()
+log.info "Path: "+ requestPath
+
+if( requestPath.contains("json") )
+{
+    // return the name of the response you want to dispatch
+    return "JSON Response"
+}
+
+
+// Match based on query parameter
+def queryString = mockRequest.getRequest().getQueryString()
+log.info "QueryString: " + queryString
+
+if( queryString.contains("stockholm") )
+{
+    // return the name of the response you want to dispatch
+    return "Response Stockholm"
+}
+else if( queryString.contains("london") )
+{
+    // return the name of the response you want to dispatch
+    return "Response London"
+}
+
+
+// Match based on header
+def acceptEncodingHeaderList = mockRequest.getRequestHeaders().get("Accept-Encoding")
+log.info "AcceptEncoding Header List: " + acceptEncodingHeaderList
+
+if( acceptEncodingHeaderList.contains("gzip,deflate") )
+{
+    // return the name of the response you want to dispatch
+    return "GZiped Response"
+}
+
+
+// Match based on body
+def requestBody = mockRequest.getRequestContent()
+log.info "Request body: " + requestBody
+
+if( requestBody.contains("some data") )
+{
+    // return the name of the response you want to dispatch
+    return "Response N"
+}
+*/
+</con:dispatchPath><con:response name="adtags_YY00D4451195" id="d9051615-bc8b-4147-9c35-2e3dff0b65b5" httpResponseStatus="200"><con:settings/><con:responseContent><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<GetHomeResponse>
+   <SchedulerContainer Class="basic_50_h" GeoID="1" HomeID="YY00D4451195" State="1" StateChangeTime="2017-06-15T20:35:08Z" Type="2">
+      <Metadata />
+      <Members>
+         <Member />
+      </Members>
+      <BoxStatus Occupied="0" QuotaType="minutes" Scheduled="0" Total="3000" />
+   </SchedulerContainer>
+   <ad_tags>
+    <ad_tag>NYC-45</ad_tag>
+    <ad_tag>DEN</ad_tag>
+  </ad_tags>
+</GetHomeResponse>]]></con:responseContent></con:response></con:restMockAction><con:restMockAction name="/v1/home/4E654T010208" method="GET" resourcePath="/v1/home/4E654T010208" id="f270f0af-bc18-4182-9c8c-e0e3d6bf1b4c"><con:settings/><con:defaultResponse xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:dispatchPath>/*
+// Script dispatcher is used to select a response based on the incoming request.
+// Here are few examples showing how to match based on path, query param, header and body
+
+// Match based on path
+def requestPath = mockRequest.getPath()
+log.info "Path: "+ requestPath
+
+if( requestPath.contains("json") )
+{
+    // return the name of the response you want to dispatch
+    return "JSON Response"
+}
+
+
+// Match based on query parameter
+def queryString = mockRequest.getRequest().getQueryString()
+log.info "QueryString: " + queryString
+
+if( queryString.contains("stockholm") )
+{
+    // return the name of the response you want to dispatch
+    return "Response Stockholm"
+}
+else if( queryString.contains("london") )
+{
+    // return the name of the response you want to dispatch
+    return "Response London"
+}
+
+
+// Match based on header
+def acceptEncodingHeaderList = mockRequest.getRequestHeaders().get("Accept-Encoding")
+log.info "AcceptEncoding Header List: " + acceptEncodingHeaderList
+
+if( acceptEncodingHeaderList.contains("gzip,deflate") )
+{
+    // return the name of the response you want to dispatch
+    return "GZiped Response"
+}
+
+
+// Match based on body
+def requestBody = mockRequest.getRequestContent()
+log.info "Request body: " + requestBody
+
+if( requestBody.contains("some data") )
+{
+    // return the name of the response you want to dispatch
+    return "Response N"
+}
+*/
+</con:dispatchPath><con:response name="adtags_4E654T010208" id="b62a091d-888e-4883-b025-54c68f87df72" httpResponseStatus="200"><con:settings/><con:responseContent><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<GetHomeResponse>
+   <SchedulerContainer Class="basic_50_h" GeoID="1" HomeID="4E654T010208" State="2" StateChangeTime="2017-06-15T20:35:08Z" Type="2">
+      <Metadata />
+      <Members>
+         <Member />
+      </Members>
+      <BoxStatus Occupied="0" QuotaType="minutes" Scheduled="0" Total="3000" />
+   </SchedulerContainer>
+   <ad_tags>
+    <ad_tag>68506</ad_tag>
+    <ad_tag>LNC-99</ad_tag>
+    <ad_tag>LNC</ad_tag>
+  </ad_tags>
+</GetHomeResponse>]]></con:responseContent></con:response></con:restMockAction></con:restMockService><con:restMockService id="dd6879e3-8378-438d-85f5-96c8d64eead8" port="8090" path="/" host="amohmmed-VirtualBox" name="SeriesRecording" docroot=""><con:settings/><con:properties/><con:restMockAction name="/v2/series_recordings/1GH33X051536" method="GET" resourcePath="/v2/series_recordings/1GH33X051536" id="7db66e8c-fac0-4b79-85e7-cb13636b11ab"><con:settings/><con:defaultResponse xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:dispatchPath>/*
+// Script dispatcher is used to select a response based on the incoming request.
+// Here are few examples showing how to match based on path, query param, header and body
+
+// Match based on path
+def requestPath = mockRequest.getPath()
+log.info "Path: "+ requestPath
+
+if( requestPath.contains("json") )
+{
+    // return the name of the response you want to dispatch
+    return "JSON Response"
+}
+
+
+// Match based on query parameter
+def queryString = mockRequest.getRequest().getQueryString()
+log.info "QueryString: " + queryString
+
+if( queryString.contains("stockholm") )
+{
+    // return the name of the response you want to dispatch
+    return "Response Stockholm"
+}
+else if( queryString.contains("london") )
+{
+    // return the name of the response you want to dispatch
+    return "Response London"
+}
+
+
+// Match based on header
+def acceptEncodingHeaderList = mockRequest.getRequestHeaders().get("Accept-Encoding")
+log.info "AcceptEncoding Header List: " + acceptEncodingHeaderList
+
+if( acceptEncodingHeaderList.contains("gzip,deflate") )
+{
+    // return the name of the response you want to dispatch
+    return "GZiped Response"
+}
+
+
+// Match based on body
+def requestBody = mockRequest.getRequestContent()
+log.info "Request body: " + requestBody
+
+if( requestBody.contains("some data") )
+{
+    // return the name of the response you want to dispatch
+    return "Response N"
+}
+*/
+</con:dispatchPath><con:response name="series_recordings_1GH33X051536" id="aa920c6a-8437-4a33-b23a-b2567e0c8794" httpResponseStatus="200"><con:settings/><con:responseContent><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<GetSeriesReply TotalResults="4">
+   <SeriesDataList>
+      <SeriesData SeriesID="191273" Name="MLB Baseball" Channel="62081" Size="18752000000" IsProtected="true" RecordCriteria="1" BookingTime="2017-06-02T21:04:57Z" MultichannelRecording="0" />
+      <SeriesData SeriesID="343935" Name="Boxeo" Channel="19566" Size="27303000000" IsProtected="false" RecordOnlyNew="false" RecordOnlyLive="false" RecordCriteria="2" BookingTime="2018-03-01T05:06:18Z"/>
+    <SeriesData SeriesID="14914593" Name="Here and Now" Channel="19566" Size="49996000000" IsProtected="false" RecordOnlyNew="false" RecordOnlyLive="false" RecordCriteria="2" BookingTime="2018-03-01T05:06:04Z"/>
+   <SeriesData SeriesID="343935" Name="Boxeo" Channel="19566" Size="27303000000" IsProtected="false" RecordOnlyNew="false" RecordOnlyLive="false" RecordCriteria="2" BookingTime="2018-03-01T05:06:18Z"/>
+   </SeriesDataList>
+</GetSeriesReply>]]></con:responseContent></con:response></con:restMockAction><con:restMockAction name="/v2/series_recordings/4E654G009851" method="GET" resourcePath="/v2/series_recordings/4E654G009851" id="bb9250e1-aa2d-42d9-9212-981a2b7a0452"><con:settings/><con:defaultResponse>series_recordings_4E654G009851</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:dispatchPath>/*
+// Script dispatcher is used to select a response based on the incoming request.
+// Here are few examples showing how to match based on path, query param, header and body
+
+// Match based on path
+def requestPath = mockRequest.getPath()
+log.info "Path: "+ requestPath
+
+if( requestPath.contains("json") )
+{
+    // return the name of the response you want to dispatch
+    return "JSON Response"
+}
+
+
+// Match based on query parameter
+def queryString = mockRequest.getRequest().getQueryString()
+log.info "QueryString: " + queryString
+
+if( queryString.contains("stockholm") )
+{
+    // return the name of the response you want to dispatch
+    return "Response Stockholm"
+}
+else if( queryString.contains("london") )
+{
+    // return the name of the response you want to dispatch
+    return "Response London"
+}
+
+
+// Match based on header
+def acceptEncodingHeaderList = mockRequest.getRequestHeaders().get("Accept-Encoding")
+log.info "AcceptEncoding Header List: " + acceptEncodingHeaderList
+
+if( acceptEncodingHeaderList.contains("gzip,deflate") )
+{
+    // return the name of the response you want to dispatch
+    return "GZiped Response"
+}
+
+
+// Match based on body
+def requestBody = mockRequest.getRequestContent()
+log.info "Request body: " + requestBody
+
+if( requestBody.contains("some data") )
+{
+    // return the name of the response you want to dispatch
+    return "Response N"
+}
+*/
+</con:dispatchPath><con:response name="series_recordings_4E654G009851" id="60dd4c6f-2844-4264-b22c-9a09ff92201c" httpResponseStatus="200"><con:settings/><con:responseContent><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<GetSeriesReply TotalResults="3">
+   <SeriesDataList>
+      <SeriesData SeriesID="191273" Name="MLB Baseball" Channel="62081" Size="18752000000" IsProtected="true" RecordCriteria="1" BookingTime="2017-06-02T21:04:57Z" MultichannelRecording="0" />
+      <SeriesData SeriesID="343935" Name="Boxeo" Channel="19566" Size="27303000000" IsProtected="false" RecordOnlyNew="false" RecordOnlyLive="false" RecordCriteria="2" BookingTime="2018-03-01T05:06:18Z"/>
+      <SeriesData SeriesID="343935" Name="Boxeo" Channel="19566" Size="27303000000" IsProtected="false" RecordOnlyNew="false" RecordOnlyLive="false" RecordCriteria="2" BookingTime="2018-03-01T05:06:18Z"/>
+   </SeriesDataList>
+</GetSeriesReply>]]></con:responseContent></con:response></con:restMockAction><con:restMockAction name="/v2/series_recordings/YY00D4451195" method="GET" resourcePath="/v2/series_recordings/YY00D4451195" id="e83b36c2-974f-4170-8d4f-1ad554af10f2"><con:settings/><con:defaultResponse xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:dispatchPath>/*
+// Script dispatcher is used to select a response based on the incoming request.
+// Here are few examples showing how to match based on path, query param, header and body
+
+// Match based on path
+def requestPath = mockRequest.getPath()
+log.info "Path: "+ requestPath
+
+if( requestPath.contains("json") )
+{
+    // return the name of the response you want to dispatch
+    return "JSON Response"
+}
+
+
+// Match based on query parameter
+def queryString = mockRequest.getRequest().getQueryString()
+log.info "QueryString: " + queryString
+
+if( queryString.contains("stockholm") )
+{
+    // return the name of the response you want to dispatch
+    return "Response Stockholm"
+}
+else if( queryString.contains("london") )
+{
+    // return the name of the response you want to dispatch
+    return "Response London"
+}
+
+
+// Match based on header
+def acceptEncodingHeaderList = mockRequest.getRequestHeaders().get("Accept-Encoding")
+log.info "AcceptEncoding Header List: " + acceptEncodingHeaderList
+
+if( acceptEncodingHeaderList.contains("gzip,deflate") )
+{
+    // return the name of the response you want to dispatch
+    return "GZiped Response"
+}
+
+
+// Match based on body
+def requestBody = mockRequest.getRequestContent()
+log.info "Request body: " + requestBody
+
+if( requestBody.contains("some data") )
+{
+    // return the name of the response you want to dispatch
+    return "Response N"
+}
+*/
+</con:dispatchPath><con:response name="series_recordings_YY00D4451195" id="a1fc5165-053f-494e-ac9f-b58fbc673ded" httpResponseStatus="200"><con:settings/><con:responseContent><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<GetSeriesReply TotalResults="4">
+   <SeriesDataList>
+      <SeriesData SeriesID="183943" Name="The Andy Griffith Show" Channel="71280" Size="549734000000" IsProtected="true" RecordCriteria="2" BookingTime="2017-06-02T21:03:17Z" MultichannelRecording="0" />
+      <SeriesData SeriesID="183942" Name="Start All Over Again" Channel="68796" Size="72058000000" IsProtected="false" RecordCriteria="2" BookingTime="2017-06-02T21:02:32Z" StartTimeOffset="0" EndTimeOffset="0" MultichannelRecording="0" />
+      <SeriesData SeriesID="343935" Name="Boxeo" Channel="19566" Size="27303000000" IsProtected="false" RecordOnlyNew="false" RecordOnlyLive="false" RecordCriteria="2" BookingTime="2018-03-01T05:06:18Z"/>
+    <SeriesData SeriesID="14914593" Name="Here and Now" Channel="19566" Size="49996000000" IsProtected="false" RecordOnlyNew="false" RecordOnlyLive="false" RecordCriteria="2" BookingTime="2018-03-01T05:06:04Z"/>
+   </SeriesDataList>
+</GetSeriesReply>]]></con:responseContent></con:response></con:restMockAction><con:restMockAction name="/v2/series_recordings/4E654T010208" method="GET" resourcePath="/v2/series_recordings/4E654T010208" id="bbee1f9c-cc59-41eb-86d4-6779169f557e"><con:settings/><con:defaultResponse>series_recordings_4E654T010208</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:dispatchPath>/*
+// Script dispatcher is used to select a response based on the incoming request.
+// Here are few examples showing how to match based on path, query param, header and body
+
+// Match based on path
+def requestPath = mockRequest.getPath()
+log.info "Path: "+ requestPath
+
+if( requestPath.contains("json") )
+{
+    // return the name of the response you want to dispatch
+    return "JSON Response"
+}
+
+
+// Match based on query parameter
+def queryString = mockRequest.getRequest().getQueryString()
+log.info "QueryString: " + queryString
+
+if( queryString.contains("stockholm") )
+{
+    // return the name of the response you want to dispatch
+    return "Response Stockholm"
+}
+else if( queryString.contains("london") )
+{
+    // return the name of the response you want to dispatch
+    return "Response London"
+}
+
+
+// Match based on header
+def acceptEncodingHeaderList = mockRequest.getRequestHeaders().get("Accept-Encoding")
+log.info "AcceptEncoding Header List: " + acceptEncodingHeaderList
+
+if( acceptEncodingHeaderList.contains("gzip,deflate") )
+{
+    // return the name of the response you want to dispatch
+    return "GZiped Response"
+}
+
+
+// Match based on body
+def requestBody = mockRequest.getRequestContent()
+log.info "Request body: " + requestBody
+
+if( requestBody.contains("some data") )
+{
+    // return the name of the response you want to dispatch
+    return "Response N"
+}
+*/
+</con:dispatchPath><con:response name="series_recordings_4E654T010208" id="3c6b1a3c-1fc3-4f84-9995-e378b27e2be5" httpResponseStatus="200"><con:settings/><con:responseContent>&lt;?xml version="1.0" encoding="UTF-8"?>
+&lt;GetSeriesReply TotalResults="0">
+   &lt;SeriesDataList />
+&lt;/GetSeriesReply></con:responseContent></con:response></con:restMockAction></con:restMockService><con:restMockService id="b18f138e-7eec-4731-bb68-a1be3e8ac8c1" port="8091" path="/" host="amohmmed-VirtualBox" name="EventRecordings" docroot=""><con:settings/><con:properties/><con:restMockAction name="/v2/subscribers/recordings/1GH33X051536" method="GET" resourcePath="/v2/subscribers/recordings/1GH33X051536" id="c6ca3345-6492-4764-a47c-c6be8479bc2a"><con:settings/><con:defaultResponse xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:dispatchPath>/*
+// Script dispatcher is used to select a response based on the incoming request.
+// Here are few examples showing how to match based on path, query param, header and body
+
+// Match based on path
+def requestPath = mockRequest.getPath()
+log.info "Path: "+ requestPath
+
+if( requestPath.contains("json") )
+{
+    // return the name of the response you want to dispatch
+    return "JSON Response"
+}
+
+
+// Match based on query parameter
+def queryString = mockRequest.getRequest().getQueryString()
+log.info "QueryString: " + queryString
+
+if( queryString.contains("stockholm") )
+{
+    // return the name of the response you want to dispatch
+    return "Response Stockholm"
+}
+else if( queryString.contains("london") )
+{
+    // return the name of the response you want to dispatch
+    return "Response London"
+}
+
+
+// Match based on header
+def acceptEncodingHeaderList = mockRequest.getRequestHeaders().get("Accept-Encoding")
+log.info "AcceptEncoding Header List: " + acceptEncodingHeaderList
+
+if( acceptEncodingHeaderList.contains("gzip,deflate") )
+{
+    // return the name of the response you want to dispatch
+    return "GZiped Response"
+}
+
+
+// Match based on body
+def requestBody = mockRequest.getRequestContent()
+log.info "Request body: " + requestBody
+
+if( requestBody.contains("some data") )
+{
+    // return the name of the response you want to dispatch
+    return "Response N"
+}
+*/
+</con:dispatchPath><con:response name="recordings/1GH33X051536" id="037d3eb4-4fea-4ae1-973e-0e7504254d6d" httpResponseStatus="200"><con:settings/><con:responseContent><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<GetSubscriberRecordingsListReply TotalResults="6">
+   <Recording ShowingID="AUTO_18718SH02338813000015035940000001502455890563" Channel="18718" ChannelCallLetter="BETSOUL" ShowStartTime="2017-08-24T17:00:00Z" ShowEndTime="2017-08-24T18:00:00Z" StartTime="2017-08-24T17:26:40Z" EndTime="2017-08-24T18:00:00Z" BookingTime="2017-08-24T17:26:40Z" IsProtected="false" AlreadyWatched="false" BeingWatched="false" Progress="0">
+      <ProgramInfo ProgramID="SH023388130000" Name="The Soul Player" SeriesID="310315" SeriesName="The Soul Player" Description="Music videos." Type="Program" />
+      <ABRDetails Size="1024000000" Duration="PT33M20S" State="5" Error="HTTP 473: Program already scheduled" />
+   </Recording>
+   <Recording ShowingID="AUTO_19566MV01072684000015198768000001518789178157" Channel="19566" ChannelCallLetter="HBOHDP" ShowStartTime="2018-03-01T04:00:00Z" ShowEndTime="2018-03-01T05:30:00Z" StartTime="2018-03-01T05:04:33Z" EndTime="2018-03-01T05:30:00Z" BookingTime="2018-03-01T05:04:33Z" IsProtected="false" AlreadyWatched="false" BeingWatched="false" Progress="100">
+      <ProgramInfo ProgramID="MV010726840000" Name="Notes From the Field" Description="Anna Deavere Smith's portrayal of 18 real-life characters dramatizes the accounts of students, parents, teachers and administrators who are caught up in America's school-to-prison pipeline." Year="2018" Type="Program" />
+      <ABRDetails Size="2644000000" Duration="PT25M23S" State="4" />
+   </Recording>
+   <Recording ShowingID="AUTO_19566EP02838861000315199716000001518876000824" Channel="19566" ChannelCallLetter="HBOHDP" ShowStartTime="2018-03-02T06:20:00Z" ShowEndTime="2018-03-02T07:20:00Z" StartTime="2018-03-02T06:20:00Z" EndTime="2018-03-02T07:20:00Z" BookingTime="2018-03-01T05:06:04Z" IsProtected="false" AlreadyWatched="false" BeingWatched="false" Progress="100">
+      <ProgramInfo ProgramID="EP028388610003" Name="Here and Now" SeasonID="14947209" SeriesID="14914593" SeriesName="Here and Now" Rating="12" Description="The Bayer-Boatwrights of Portland, Ore., appear to be a model family, made up of members from different countries and backgrounds, reflecting the multicultural potential of the country. Philosophy professor Greg and his wife, former therapist-turned-school consultant Audrey, have three adopted children -- from Liberia, Vietnam and Colombia -- and a biological daughter, the youngest at 17. As Greg approaches a milestone birthday, serious domestic issues begin to emerge that threaten to ruin the family's very way of life, forcing Greg and Audrey to hire Dr. Farid Shokrani, a Muslim psychiatrist who has demons of his own. The darkly comic series is created by Emmy and Oscar winner Alan Ball" EpisodeNumber="3" EpisodeTitle="If a Deer S... in the Woods" Type="Series" />
+      <ABRDetails Size="6250000000" Duration="PT59M57S" State="4" />
+   </Recording>
+   <Recording ShowingID="AUTO_19566EP02844465005115201435000001519048258729" Channel="19566" ChannelCallLetter="HBOHDP" ShowStartTime="2018-03-04T06:05:00Z" ShowEndTime="2018-03-04T08:20:00Z" StartTime="2018-03-04T06:05:00Z" EndTime="2018-03-04T08:20:00Z" BookingTime="2018-03-01T05:06:18Z" IsProtected="false" AlreadyWatched="false" BeingWatched="false" Progress="100">
+      <ProgramInfo ProgramID="EP028444650051" Name="Boxing" SeriesID="343935" SeriesName="Boxeo" Rating="TVPG" Description="Sergey Kovalev (31-2-1, 27 KOs) takes on Igor Mikhalkin (21-1, 9 KOs) in the 12-round light heavyweight title bout; from New York. Also: Sullivan Barrera vs. Dmitry Bivol, light heavyweights, 12 rounds." Type="Series" />
+      <ABRDetails Size="14057000000" Duration="PT02H14M56S" State="4" />
+   </Recording>
+   <Recording ShowingID="AUTO_19566EP02844465016715255864000001524487844886" Channel="19566" ChannelCallLetter="HBOHDP" ShowStartTime="2018-05-06T06:00:00Z" ShowEndTime="2018-05-06T08:15:00Z" StartTime="2018-05-06T06:00:00Z" EndTime="2018-05-06T08:15:00Z" BookingTime="2018-04-23T13:19:56Z" IsProtected="false" AlreadyWatched="false" BeingWatched="false" Progress="0">
+      <ProgramInfo ProgramID="EP028444650167" Name="Boxing" SeriesID="343935" SeriesName="Boxeo" Rating="TVPG" Description="The unbeaten WBA, WBC and IBF middleweight champ Gennady Golovkin (37-0-1, 33 KOs) will defend his titles against Vanes Martirosyan (36-3-1, 23 KOs). From Carson, Calif." Type="Series" />
+      <ABRDetails Size="13246000000" Duration="PT02H15M00S" State="1" />
+   </Recording>
+   <Recording ShowingID="AUTO_59615EP00385190012115240636000001522932738575" Channel="59615" ChannelCallLetter="FREFMHD" ShowStartTime="2018-04-18T15:00:00Z" ShowEndTime="2018-04-30T16:00:00Z" StartTime="2018-04-30T15:00:00Z" EndTime="2018-04-30T16:00:00Z" BookingTime="2018-04-05T12:59:40Z" IsProtected="false" AlreadyWatched="false" BeingWatched="false" Progress="0">
+      <ProgramInfo ProgramID="EP003851900121" Name="Gilmore Girls" SeasonID="7894446" SeriesID="184655" SeriesName="Gilmore Girls" Rating="6" Description="Set in a storybook Connecticut town populated by an eclectic mix of dreamers, artists and everyday folk, this multigenerational drama about family and friendship centers around Lorelai Gilmore and her daughter, Rory. Lorelai owns the town's bed-and-breakfast, the Dragonfly Inn, with best friend/chef Sookie, and contends with weekly dinners with eccentric, well-off parents Richard and Emily Gilmore (who always have something to say about their daughter's life). After high school, Rory attends Yale University but frequently returns to Stars Hollow to visit her mom." EpisodeNumber="3" EpisodeTitle="The UnGraduate" Type="Series" />
+      <ABRDetails Size="4803000000" Duration="PT01H00M00S" State="1" />
+   </Recording>
+</GetSubscriberRecordingsListReply>]]></con:responseContent></con:response></con:restMockAction><con:restMockAction name="/v2/subscribers/recordings/4E654G009851" method="GET" resourcePath="/v2/subscribers/recordings/4E654G009851" id="51955140-a8b7-4397-89bd-cb59dc74165e"><con:settings/><con:defaultResponse>/v2/subscribers/recordings/4E654G009851</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:dispatchPath>/*
+// Script dispatcher is used to select a response based on the incoming request.
+// Here are few examples showing how to match based on path, query param, header and body
+
+// Match based on path
+def requestPath = mockRequest.getPath()
+log.info "Path: "+ requestPath
+
+if( requestPath.contains("json") )
+{
+    // return the name of the response you want to dispatch
+    return "JSON Response"
+}
+
+
+// Match based on query parameter
+def queryString = mockRequest.getRequest().getQueryString()
+log.info "QueryString: " + queryString
+
+if( queryString.contains("stockholm") )
+{
+    // return the name of the response you want to dispatch
+    return "Response Stockholm"
+}
+else if( queryString.contains("london") )
+{
+    // return the name of the response you want to dispatch
+    return "Response London"
+}
+
+
+// Match based on header
+def acceptEncodingHeaderList = mockRequest.getRequestHeaders().get("Accept-Encoding")
+log.info "AcceptEncoding Header List: " + acceptEncodingHeaderList
+
+if( acceptEncodingHeaderList.contains("gzip,deflate") )
+{
+    // return the name of the response you want to dispatch
+    return "GZiped Response"
+}
+
+
+// Match based on body
+def requestBody = mockRequest.getRequestContent()
+log.info "Request body: " + requestBody
+
+if( requestBody.contains("some data") )
+{
+    // return the name of the response you want to dispatch
+    return "Response N"
+}
+*/
+</con:dispatchPath><con:response name="/v2/subscribers/recordings/4E654G009851" id="42d411ab-d7a4-4fa7-954d-98617e76cd60" httpResponseStatus="200"><con:settings/><con:responseContent><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<GetSubscriberRecordingsListReply TotalResults="5">
+   <Recording ShowingID="AUTO_68796EP00115131023615239916000001522846996514" Channel="68796" ChannelCallLetter="POPHD" ShowStartTime="2018-04-30T23:00:00Z" ShowEndTime="2018-05-01T00:00:00Z" StartTime="2018-04-30T23:00:00Z" EndTime="2018-05-01T00:00:00Z" BookingTime="2018-04-05T11:22:42Z" IsProtected="false" AlreadyWatched="false" BeingWatched="false" Progress="0">
+      <ProgramInfo ProgramID="SH000044220000" Name="ER" SeasonID="7891891" SeriesID="183904" SeriesName="ER" Rating="8+" Description="Set in Chicago, this medical drama deals with the personal and professional crises of the doctors in the emergency room at County General Hospital. From the exciting to the mundane, a day in the frantic hospital serves up many interesting dilemmas as well as heartrending choices for everyone on staff." EpisodeNumber="2" EpisodeTitle="Damaged" Type="Series" />
+      <ABRDetails Size="5016000000" Duration="PT01H07M00S" State="1" />
+   </Recording>
+   <Recording ShowingID="AUTO_59355EP02757470000115232122000001522068776106" Channel="59355" ChannelCallLetter="HBO2PHD" ShowStartTime="2018-04-08T18:30:00Z" ShowEndTime="2018-04-08T19:30:00Z" StartTime="2018-04-08T18:30:00Z" EndTime="2018-04-08T19:30:00Z" BookingTime="2018-03-26T13:50:25Z" IsProtected="false" AlreadyWatched="false" BeingWatched="false" Progress="100">
+      <ProgramInfo ProgramID="EP027574700001" Name="2 Dope Queens" SeasonID="14986311" SeriesID="14450289" SeriesName="2 Dope Queens" Rating="18+" Description="Jessica Williams and Phoebe Robinson -- described as hilarious and socially aware at the same time -- bring their hit comedy podcast to HBO for a series of hourlong specials. Each has a theme that is built around a main guest -- in N.Y." EpisodeNumber="1" EpisodeTitle="New York" Type="Series" />
+      <ABRDetails Size="5128000000" Duration="PT59M57S" State="4" />
+   </Recording>
+   <Recording ShowingID="AUTO_19566EP02844465016715255864000001524487844886" Channel="19566" ChannelCallLetter="HBOHDP" ShowStartTime="2018-05-06T06:00:00Z" ShowEndTime="2018-05-06T08:15:00Z" StartTime="2018-05-06T06:00:00Z" EndTime="2018-05-06T08:15:00Z" BookingTime="2018-04-23T13:19:56Z" IsProtected="false" AlreadyWatched="false" BeingWatched="false" Progress="0">
+      <ProgramInfo ProgramID="EP028444650167" Name="Boxing" SeriesID="343935" SeriesName="Boxeo" Rating="TVPG" Description="The unbeaten WBA, WBC and IBF middleweight champ Gennady Golovkin (37-0-1, 33 KOs) will defend his titles against Vanes Martirosyan (36-3-1, 23 KOs). From Carson, Calif." Type="Series" />
+      <ABRDetails Size="13246000000" Duration="PT02H15M00S" State="1" />
+   </Recording>
+   <Recording ShowingID="AUTO_59355EP02757470000415198804000001518789165650" Channel="59355" ChannelCallLetter="HBO2PHD" ShowStartTime="2018-03-01T05:00:00Z" ShowEndTime="2018-03-01T06:00:00Z" StartTime="2018-03-01T05:04:41Z" EndTime="2018-03-01T06:00:00Z" BookingTime="2018-03-01T05:04:41Z" IsProtected="false" AlreadyWatched="false" BeingWatched="false" Progress="100">
+      <ProgramInfo ProgramID="EP027574700004" Name="2 Dope Queens" SeasonID="14986311" SeriesID="14450289" SeriesName="2 Dope Queens" Rating="TVMA" Description="Jessica Williams and Phoebe Robinson -- described as hilarious and socially aware at the same time -- bring their hit comedy podcast to HBO for a series of hourlong specials. Each has a theme that is built around a main guest -- in  example, Jon Stewart shares memories of living in the city, and Jessica and Phoebe test his pizza knowledge -- plus showcases some of the ladies' favorite stand-up comics. Other guests include Uzo Aduba, Sarah Jessica Parker and Tituss Burgess. The shows are taped in front of a studio audience at Kings Theatre in Brooklyn, N.Y." EpisodeNumber="4" EpisodeTitle="Black Nerds (aka Blerds)" Type="Series" />
+      <ABRDetails Size="4728000000" Duration="PT55M15S" State="4" />
+   </Recording>
+   <Recording ShowingID="AUTO_68796EP00115131013815216588000001520517005415" Channel="68796" ChannelCallLetter="POPHD" ShowStartTime="2018-03-21T19:00:00Z" ShowEndTime="2018-03-21T20:00:00Z" StartTime="2018-03-21T19:00:00Z" EndTime="2018-03-21T20:00:00Z" BookingTime="2018-03-09T01:59:25Z" IsProtected="false" AlreadyWatched="false" BeingWatched="false" Progress="100">
+      <ProgramInfo ProgramID="EP001151310138" Name="ER" SeasonID="7891887" SeriesID="183942" SeriesName="ER" Rating="TVPG" Description="Set in Chicago, this medical drama deals with the personal and professional crises of the doctors in the emergency room at County General Hospital. From the exciting to the mundane, a day in the frantic hospital serves up many interesting dilemmas as well as heartrending choices for everyone on staff." EpisodeNumber="1" EpisodeTitle="Homecoming" Type="Series" />
+      <ABRDetails Size="4802000000" Duration="PT59M57S" State="4" />
+   </Recording>
+</GetSubscriberRecordingsListReply>]]></con:responseContent></con:response></con:restMockAction><con:restMockAction name="/v2/subscribers/recordings/YY00D4451195" method="GET" resourcePath="/v2/subscribers/recordings/YY00D4451195" id="5c1c1a01-4136-471f-9f78-e6c4317f9f2e"><con:settings/><con:defaultResponse>/v2/subscribers/recordings/YY00D4451195</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:dispatchPath>/*
+// Script dispatcher is used to select a response based on the incoming request.
+// Here are few examples showing how to match based on path, query param, header and body
+
+// Match based on path
+def requestPath = mockRequest.getPath()
+log.info "Path: "+ requestPath
+
+if( requestPath.contains("json") )
+{
+    // return the name of the response you want to dispatch
+    return "JSON Response"
+}
+
+
+// Match based on query parameter
+def queryString = mockRequest.getRequest().getQueryString()
+log.info "QueryString: " + queryString
+
+if( queryString.contains("stockholm") )
+{
+    // return the name of the response you want to dispatch
+    return "Response Stockholm"
+}
+else if( queryString.contains("london") )
+{
+    // return the name of the response you want to dispatch
+    return "Response London"
+}
+
+
+// Match based on header
+def acceptEncodingHeaderList = mockRequest.getRequestHeaders().get("Accept-Encoding")
+log.info "AcceptEncoding Header List: " + acceptEncodingHeaderList
+
+if( acceptEncodingHeaderList.contains("gzip,deflate") )
+{
+    // return the name of the response you want to dispatch
+    return "GZiped Response"
+}
+
+
+// Match based on body
+def requestBody = mockRequest.getRequestContent()
+log.info "Request body: " + requestBody
+
+if( requestBody.contains("some data") )
+{
+    // return the name of the response you want to dispatch
+    return "Response N"
+}
+*/
+</con:dispatchPath><con:response name="/v2/subscribers/recordings/YY00D4451195" id="2c55bee3-6825-4a2c-aa96-1e3001e123df" httpResponseStatus="200"><con:settings/><con:responseContent>&lt;?xml version="1.0" encoding="UTF-8"?>
+&lt;GetSubscriberRecordingsListReply TotalResults="0" /></con:responseContent></con:response></con:restMockAction><con:restMockAction name="/v2/subscribers/recordings/4E654T010208" method="GET" resourcePath="/v2/subscribers/recordings/4E654T010208" id="ff82cd88-8c76-4d23-ab9a-83ea50943157"><con:settings/><con:defaultResponse>/v2/subscribers/recordings/4E654T010208</con:defaultResponse><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:dispatchPath>/*
+// Script dispatcher is used to select a response based on the incoming request.
+// Here are few examples showing how to match based on path, query param, header and body
+
+// Match based on path
+def requestPath = mockRequest.getPath()
+log.info "Path: "+ requestPath
+
+if( requestPath.contains("json") )
+{
+    // return the name of the response you want to dispatch
+    return "JSON Response"
+}
+
+
+// Match based on query parameter
+def queryString = mockRequest.getRequest().getQueryString()
+log.info "QueryString: " + queryString
+
+if( queryString.contains("stockholm") )
+{
+    // return the name of the response you want to dispatch
+    return "Response Stockholm"
+}
+else if( queryString.contains("london") )
+{
+    // return the name of the response you want to dispatch
+    return "Response London"
+}
+
+
+// Match based on header
+def acceptEncodingHeaderList = mockRequest.getRequestHeaders().get("Accept-Encoding")
+log.info "AcceptEncoding Header List: " + acceptEncodingHeaderList
+
+if( acceptEncodingHeaderList.contains("gzip,deflate") )
+{
+    // return the name of the response you want to dispatch
+    return "GZiped Response"
+}
+
+
+// Match based on body
+def requestBody = mockRequest.getRequestContent()
+log.info "Request body: " + requestBody
+
+if( requestBody.contains("some data") )
+{
+    // return the name of the response you want to dispatch
+    return "Response N"
+}
+*/
+</con:dispatchPath><con:response name="/v2/subscribers/recordings/4E654T010208" id="8751c10b-dc88-4a96-b02b-a67bdb5ea4e4" httpResponseStatus="200"><con:settings/><con:responseContent><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
+<GetSubscriberRecordingsListReply TotalResults="4">
+   <Recording ShowingID="AUTO_18718SH02338813000015035940000001502455890563" Channel="18718" ChannelCallLetter="BETSOUL" ShowStartTime="2017-08-24T17:00:00Z" ShowEndTime="2017-08-24T18:00:00Z" StartTime="2017-08-24T17:26:40Z" EndTime="2017-08-24T18:00:00Z" BookingTime="2017-08-24T17:26:40Z" IsProtected="false" AlreadyWatched="false" BeingWatched="false" Progress="0">
+      <ProgramInfo ProgramID="SH023388130000" Name="The Soul Player" SeriesID="310315" SeriesName="The Soul Player" Description="Music videos." Type="Program" />
+      <ABRDetails Size="1024000000" Duration="PT33M20S" State="5" Error="HTTP 473: Program already scheduled" />
+   </Recording>
+   <Recording ShowingID="AUTO_59355EP02757470000415198804000001518789165650" Channel="59355" ChannelCallLetter="HBO2PHD" ShowStartTime="2018-03-01T05:00:00Z" ShowEndTime="2018-03-01T06:00:00Z" StartTime="2018-03-01T05:04:41Z" EndTime="2018-03-01T06:00:00Z" BookingTime="2018-03-01T05:04:41Z" IsProtected="false" AlreadyWatched="false" BeingWatched="false" Progress="100">
+      <ProgramInfo ProgramID="EP027574700004" Name="2 Dope Queens" SeasonID="14986311" SeriesID="14450289" SeriesName="2 Dope Queens" Rating="TVMA" Description="Jessica Williams and Phoebe Robinson -- described as hilarious and socially aware at the same time -- bring their hit comedy podcast to HBO for a series of hourlong specials. Each has a theme that is built around a main guest -- on Stewart shares memories of living in the city, and Jessica and Phoebe test his pizza knowledge -- plus showcases some of the ladies' favorite stand-up comics. Other guests include Uzo Aduba, Sarah Jessica Parker and Tituss Burgess. The shows are taped in front of a studio audience at Kings Theatre in Brooklyn, N.Y." EpisodeNumber="4" EpisodeTitle="Black Nerds (aka Blerds)" Type="Series" />
+      <ABRDetails Size="4728000000" Duration="PT55M15S" State="4" />
+   </Recording>
+   <Recording ShowingID="AUTO_59948MV00765654000015035931000001502455895075" Channel="59948" ChannelCallLetter="ACMAXHD" ShowStartTime="2017-08-24T16:45:00Z" ShowEndTime="2017-08-24T18:40:00Z" StartTime="2017-08-24T18:20:20Z" EndTime="2017-08-24T18:40:00Z" BookingTime="2017-08-24T18:20:20Z" IsProtected="false" AlreadyWatched="false" BeingWatched="false" Progress="0">
+      <ProgramInfo ProgramID="MV007656540000" Name="Midnight Special" Description="He's not like us." Year="2016" Type="Program" />
+      <ABRDetails Size="1930000000" Duration="PT19M40S" State="5" Error="HTTP 473: Program already scheduled" />
+   </Recording>
+   <Recording ShowingID="AUTO_59615EP00385190012115240636000001522932738575" Channel="59615" ChannelCallLetter="FREFMHD" ShowStartTime="2018-04-30T15:00:00Z" ShowEndTime="2018-04-30T16:00:00Z" StartTime="2018-04-30T15:00:00Z" EndTime="2018-04-30T16:00:00Z" BookingTime="2018-04-05T12:59:40Z" IsProtected="false" AlreadyWatched="false" BeingWatched="false" Progress="0">
+      <ProgramInfo ProgramID="EP003851900121" Name="Gilmore Girls" SeasonID="7894446" SeriesID="184655" SeriesName="Gilmore Girls" Rating="6" Description="Set in a storybook Connecticut town populated by an eclectic mix of dreamers, artists and everyday folk, this multigenerational drama about family and friendship centers around Lorelai Gilmore and her daughter, Rory. Lorelai owns the town's bed-and-breakfast, the Dragonfly Inn, with best friend/chef Sookie, and contends with weekly dinners with eccentric, well-off parents Richard and Emily Gilmore (who always have something to say about their daughter's life). After high school, Rory attends Yale University but frequently returns to Stars Hollow to visit her mom." EpisodeNumber="3" EpisodeTitle="The UnGraduate" Type="Series" />
+      <ABRDetails Size="4803000000" Duration="PT01H00M00S" State="1" />
+   </Recording>
+</GetSubscriberRecordingsListReply>]]></con:responseContent></con:response></con:restMockAction></con:restMockService><con:restMockService id="5768692c-ce9f-42f5-ba3e-f28dc54ef309" port="8092" path="/" host="amohmmed-VirtualBox" name="RecordMigration" docroot=""><con:settings/><con:properties/><con:restMockAction name="/cs/v3/subscribers/4E654G009851/recordingmigration" method="POST" resourcePath="/cs/v3/subscribers/4E654G009851/recordingmigration" id="1181d9b4-26c2-48d7-882a-e51567e914be"><con:settings/><con:defaultResponse xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:dispatchPath>/*
+// Script dispatcher is used to select a response based on the incoming request.
+// Here are few examples showing how to match based on path, query param, header and body
+
+// Match based on path
+def requestPath = mockRequest.getPath()
+log.info "Path: "+ requestPath
+
+if( requestPath.contains("json") )
+{
+    // return the name of the response you want to dispatch
+    return "JSON Response"
+}
+
+
+// Match based on query parameter
+def queryString = mockRequest.getRequest().getQueryString()
+log.info "QueryString: " + queryString
+
+if( queryString.contains("stockholm") )
+{
+    // return the name of the response you want to dispatch
+    return "Response Stockholm"
+}
+else if( queryString.contains("london") )
+{
+    // return the name of the response you want to dispatch
+    return "Response London"
+}
+
+
+// Match based on header
+def acceptEncodingHeaderList = mockRequest.getRequestHeaders().get("Accept-Encoding")
+log.info "AcceptEncoding Header List: " + acceptEncodingHeaderList
+
+if( acceptEncodingHeaderList.contains("gzip,deflate") )
+{
+    // return the name of the response you want to dispatch
+    return "GZiped Response"
+}
+
+
+// Match based on body
+def requestBody = mockRequest.getRequestContent()
+log.info "Request body: " + requestBody
+
+if( requestBody.contains("some data") )
+{
+    // return the name of the response you want to dispatch
+    return "Response N"
+}
+*/
+</con:dispatchPath><con:response name="Response 1" id="8de8a293-7639-461b-a989-006b11cff4d6" httpResponseStatus="200" mediaType="application/json"><con:settings/><con:responseContent>
+{
+  "results": [
+    {
+        "status": 0,
+        "message": "success or error message"
+    }
+  ]
+}</con:responseContent></con:response></con:restMockAction><con:restMockAction name="/cs/v3/subscribers/4E654T010208/recordingmigration" method="POST" resourcePath="/cs/v3/subscribers/4E654T010208/recordingmigration" id="643cc269-b5e1-4755-b680-16854b26acd6"><con:settings/><con:defaultResponse xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:dispatchPath>/*
+// Script dispatcher is used to select a response based on the incoming request.
+// Here are few examples showing how to match based on path, query param, header and body
+
+// Match based on path
+def requestPath = mockRequest.getPath()
+log.info "Path: "+ requestPath
+
+if( requestPath.contains("json") )
+{
+    // return the name of the response you want to dispatch
+    return "JSON Response"
+}
+
+
+// Match based on query parameter
+def queryString = mockRequest.getRequest().getQueryString()
+log.info "QueryString: " + queryString
+
+if( queryString.contains("stockholm") )
+{
+    // return the name of the response you want to dispatch
+    return "Response Stockholm"
+}
+else if( queryString.contains("london") )
+{
+    // return the name of the response you want to dispatch
+    return "Response London"
+}
+
+
+// Match based on header
+def acceptEncodingHeaderList = mockRequest.getRequestHeaders().get("Accept-Encoding")
+log.info "AcceptEncoding Header List: " + acceptEncodingHeaderList
+
+if( acceptEncodingHeaderList.contains("gzip,deflate") )
+{
+    // return the name of the response you want to dispatch
+    return "GZiped Response"
+}
+
+
+// Match based on body
+def requestBody = mockRequest.getRequestContent()
+log.info "Request body: " + requestBody
+
+if( requestBody.contains("some data") )
+{
+    // return the name of the response you want to dispatch
+    return "Response N"
+}
+*/
+</con:dispatchPath><con:response name="Response 1" id="f6bf80a6-4bc5-4665-806a-7006a4a846fe" httpResponseStatus="200" mediaType="application/json"><con:settings/><con:responseContent>{
+  "results": [
+    {
+        "status": 0,
+        "message": "success or error message"
+    }
+  ]
+}</con:responseContent></con:response></con:restMockAction><con:restMockAction name="/cs/v3/subscribers/YY00D4451195/recordingmigration" method="POST" resourcePath="/cs/v3/subscribers/YY00D4451195/recordingmigration" id="d44b54fc-f63c-40b9-ba52-d3a032f1d359"><con:settings/><con:defaultResponse xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:dispatchPath>/*
+// Script dispatcher is used to select a response based on the incoming request.
+// Here are few examples showing how to match based on path, query param, header and body
+
+// Match based on path
+def requestPath = mockRequest.getPath()
+log.info "Path: "+ requestPath
+
+if( requestPath.contains("json") )
+{
+    // return the name of the response you want to dispatch
+    return "JSON Response"
+}
+
+
+// Match based on query parameter
+def queryString = mockRequest.getRequest().getQueryString()
+log.info "QueryString: " + queryString
+
+if( queryString.contains("stockholm") )
+{
+    // return the name of the response you want to dispatch
+    return "Response Stockholm"
+}
+else if( queryString.contains("london") )
+{
+    // return the name of the response you want to dispatch
+    return "Response London"
+}
+
+
+// Match based on header
+def acceptEncodingHeaderList = mockRequest.getRequestHeaders().get("Accept-Encoding")
+log.info "AcceptEncoding Header List: " + acceptEncodingHeaderList
+
+if( acceptEncodingHeaderList.contains("gzip,deflate") )
+{
+    // return the name of the response you want to dispatch
+    return "GZiped Response"
+}
+
+
+// Match based on body
+def requestBody = mockRequest.getRequestContent()
+log.info "Request body: " + requestBody
+
+if( requestBody.contains("some data") )
+{
+    // return the name of the response you want to dispatch
+    return "Response N"
+}
+*/
+</con:dispatchPath><con:response name="Response 1" id="6fe7a2e4-abe7-4e39-9778-2e153905e041" httpResponseStatus="200"><con:settings/><con:responseContent>{
+  "results": [
+    {
+        "status": 0,
+        "message": "success or error message"
+    }
+  ]
+}</con:responseContent></con:response></con:restMockAction><con:restMockAction name="/cs/v3/subscribers/1GH33X051536/recordingmigration" method="POST" resourcePath="/cs/v3/subscribers/1GH33X051536/recordingmigration" id="6730956d-f74c-4ed5-b14e-a36718e41a17"><con:settings/><con:defaultResponse xsi:nil="true" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"/><con:dispatchStyle>SEQUENCE</con:dispatchStyle><con:dispatchPath>/*
+// Script dispatcher is used to select a response based on the incoming request.
+// Here are few examples showing how to match based on path, query param, header and body
+
+// Match based on path
+def requestPath = mockRequest.getPath()
+log.info "Path: "+ requestPath
+
+if( requestPath.contains("json") )
+{
+    // return the name of the response you want to dispatch
+    return "JSON Response"
+}
+
+
+// Match based on query parameter
+def queryString = mockRequest.getRequest().getQueryString()
+log.info "QueryString: " + queryString
+
+if( queryString.contains("stockholm") )
+{
+    // return the name of the response you want to dispatch
+    return "Response Stockholm"
+}
+else if( queryString.contains("london") )
+{
+    // return the name of the response you want to dispatch
+    return "Response London"
+}
+
+
+// Match based on header
+def acceptEncodingHeaderList = mockRequest.getRequestHeaders().get("Accept-Encoding")
+log.info "AcceptEncoding Header List: " + acceptEncodingHeaderList
+
+if( acceptEncodingHeaderList.contains("gzip,deflate") )
+{
+    // return the name of the response you want to dispatch
+    return "GZiped Response"
+}
+
+
+// Match based on body
+def requestBody = mockRequest.getRequestContent()
+log.info "Request body: " + requestBody
+
+if( requestBody.contains("some data") )
+{
+    // return the name of the response you want to dispatch
+    return "Response N"
+}
+*/
+</con:dispatchPath><con:response name="Response 1" id="783b3a1d-6e4c-4660-b5b8-58913847fbc3" httpResponseStatus="200" mediaType="application/json"><con:settings/><con:responseContent>{
+  "results": [
+    {
+        "status": 0,
+        "message": "success or error message"
+    }
+  ]
+}</con:responseContent></con:response></con:restMockAction></con:restMockService><con:properties/><con:wssContainer/><con:oAuth2ProfileContainer/><con:oAuth1ProfileContainer/></con:soapui-project>
