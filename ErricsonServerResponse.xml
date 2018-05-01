@@ -1,0 +1,336 @@
+<SearchSubscribersReply TotalResults="1086"><Subscribers><Subscriber HomeID="715ad612fafa832383ada28d6ea44d2d" GeoID="geo_1" Type="2" Class="SystemDefault" State="1" StateChangeTime="2016-12-12T16:21:03Z"><Members><Member/></Members></Subscriber></Subscribers></SearchSubscribersReply>
+
+
+
+
+
+<SearchSubscribersReply TotalResults="1086"><Subscribers><Subscriber HomeID="4E654G009851" GeoID="1" Type="2" Class="basic_50_h" State="2" StateChangeTime="2017-06-15T20:34:25Z"><Members><Member/></Members></Subscriber><Subscriber HomeID="4E654T010208" GeoID="1" Type="2" Class="basic_50_h" State="2" StateChangeTime="2017-06-15T20:34:46Z"><Members><Member/></Members></Subscriber><Subscriber HomeID="YY00D4451195" GeoID="1" Type="2" Class="basic_50_h" State="2" StateChangeTime="2017-06-15T20:34:56Z"><Members><Member/></Members></Subscriber><Subscriber HomeID="1GH33X051536" GeoID="1" Type="2" Class="basic_50_h" State="2" StateChangeTime="2017-06-15T20:35:08Z"><Members><Member/></Members></Subscriber></Subscribers></SearchSubscribersReply>
+
+
+{
+   "id":"default_ericsson_svcpackage",
+   "name":"Default Service Package for Migrated Ericsson Subscribers",
+   "quotaType":"SHOWS",
+   "assignedQuota":100,
+   "quotaConflictResolutionPolicy":"OLDEST_CONTENT_FIRST_EXPIRE_POLICY",
+   "assignedTuners":9999,
+   "features":[
+      "NDVR"
+   ],
+   "activeSessionsQuota":9999
+}
+
+
+<----------------------------------------------------------------------->
+   ALL 
+   SUBSCRIBERS WITH GEO TAGS
+
+ /v2/subscribers/search?Offset=0&Limit=1
+<----------------------------------------------------------------------->
+<?xml version="1.0" encoding="UTF-8"?>
+<SearchSubscribersReply TotalResults="4">
+   <Subscribers>
+      <Subscriber HomeID="4E654G009851" GeoID="1" Type="2" Class="basic_50_h" State="1" StateChangeTime="2017-06-15T20:34:25Z">
+         <Members>
+            <Member />
+         </Members>
+      </Subscriber>
+      <Subscriber HomeID="4E654T010208" GeoID="1" Type="2" Class="basic_50_h" State="2" StateChangeTime="2017-06-15T20:34:46Z">
+         <Members>
+            <Member />
+         </Members>
+      </Subscriber>
+      <Subscriber HomeID="YY00D4451195" GeoID="1" Type="2" Class="basic_50_h" State="1" StateChangeTime="2017-06-15T20:34:56Z">
+         <Members>
+            <Member />
+         </Members>
+      </Subscriber>
+      <Subscriber HomeID="1GH33X051536" GeoID="1" Type="2" Class="basic_50_h" State="1" StateChangeTime="2017-06-15T20:35:08Z">
+         <Members>
+            <Member />
+         </Members>
+      </Subscriber>
+   </Subscribers>
+</SearchSubscribersReply>
+
+
+///v1/home/1GH33X051536
+<?xml version="1.0" encoding="UTF-8"?>
+<GetHomeResponse>
+   <SchedulerContainer Class="basic_50_h" GeoID="1" HomeID="1GH33X051536" State="1" StateChangeTime="2017-06-15T20:35:08Z" Type="2">
+      <Metadata />
+      <Members>
+         <Member />
+      </Members>
+      <BoxStatus Occupied="0" QuotaType="minutes" Scheduled="0" Total="3000" />
+   </SchedulerContainer>
+   <ad_tags>
+      <ad_tag>default</ad_tag>
+   </ad_tags>
+</GetHomeResponse>
+
+///v1/home/4E654G009851
+<?xml version="1.0" encoding="UTF-8"?>
+<GetHomeResponse>
+   <SchedulerContainer Class="basic_50_h" GeoID="1" HomeID="4E654G009851" State="1" StateChangeTime="2017-06-15T20:35:08Z" Type="2">
+      <Metadata />
+      <Members>
+         <Member />
+      </Members>
+      <BoxStatus Occupied="0" QuotaType="minutes" Scheduled="0" Total="3000" />
+   </SchedulerContainer>
+   <ad_tags>
+    <ad_tag>68506</ad_tag>
+    <ad_tag>LNC-99</ad_tag>
+    <ad_tag>LNC</ad_tag>
+  </ad_tags>
+</GetHomeResponse>
+
+
+///v1/home/YY00D4451195
+<?xml version="1.0" encoding="UTF-8"?>
+<GetHomeResponse>
+   <SchedulerContainer Class="basic_50_h" GeoID="1" HomeID="YY00D4451195" State="1" StateChangeTime="2017-06-15T20:35:08Z" Type="2">
+      <Metadata />
+      <Members>
+         <Member />
+      </Members>
+      <BoxStatus Occupied="0" QuotaType="minutes" Scheduled="0" Total="3000" />
+   </SchedulerContainer>
+   <ad_tags>
+    <ad_tag>NYC-45</ad_tag>
+    <ad_tag>DEN</ad_tag>
+  </ad_tags>
+</GetHomeResponse>
+
+///v1/home/4E654T010208
+<?xml version="1.0" encoding="UTF-8"?>
+<GetHomeResponse>
+   <SchedulerContainer Class="basic_50_h" GeoID="1" HomeID="4E654T010208" State="2" StateChangeTime="2017-06-15T20:35:08Z" Type="2">
+      <Metadata />
+      <Members>
+         <Member />
+      </Members>
+      <BoxStatus Occupied="0" QuotaType="minutes" Scheduled="0" Total="3000" />
+   </SchedulerContainer>
+   <ad_tags>
+    <ad_tag>68506</ad_tag>
+    <ad_tag>LNC-99</ad_tag>
+    <ad_tag>LNC</ad_tag>
+  </ad_tags>
+</GetHomeResponse>
+
+<----------------------------------------------------------------------->
+    SERIES RECORDINGS
+<----------------------------------------------------------------------->
+///v2/series_recordings/1GH33X051536
+<?xml version="1.0" encoding="UTF-8"?>
+<GetSeriesReply TotalResults="4">
+   <SeriesDataList>
+      <SeriesData SeriesID="191273" Name="MLB Baseball" Channel="62081" Size="18752000000" IsProtected="true" RecordCriteria="1" BookingTime="2017-06-02T21:04:57Z" MultichannelRecording="0" />
+      <SeriesData SeriesID="343935" Name="Boxeo" Channel="19566" Size="27303000000" IsProtected="false" RecordOnlyNew="false" RecordOnlyLive="false" RecordCriteria="2" BookingTime="2018-03-01T05:06:18Z"/>
+    <SeriesData SeriesID="14914593" Name="Here and Now" Channel="19566" Size="49996000000" IsProtected="false" RecordOnlyNew="false" RecordOnlyLive="false" RecordCriteria="2" BookingTime="2018-03-01T05:06:04Z"/>
+   <SeriesData SeriesID="343935" Name="Boxeo" Channel="19566" Size="27303000000" IsProtected="false" RecordOnlyNew="false" RecordOnlyLive="false" RecordCriteria="2" BookingTime="2018-03-01T05:06:18Z"/>
+   </SeriesDataList>
+</GetSeriesReply>
+
+
+
+///v2/series_recordings/4E654G009851
+<?xml version="1.0" encoding="UTF-8"?>
+<GetSeriesReply TotalResults="3">
+   <SeriesDataList>
+      <SeriesData SeriesID="191273" Name="MLB Baseball" Channel="62081" Size="18752000000" IsProtected="true" RecordCriteria="1" BookingTime="2017-06-02T21:04:57Z" MultichannelRecording="0" />
+      <SeriesData SeriesID="343935" Name="Boxeo" Channel="19566" Size="27303000000" IsProtected="false" RecordOnlyNew="false" RecordOnlyLive="false" RecordCriteria="2" BookingTime="2018-03-01T05:06:18Z"/>
+      <SeriesData SeriesID="343935" Name="Boxeo" Channel="19566" Size="27303000000" IsProtected="false" RecordOnlyNew="false" RecordOnlyLive="false" RecordCriteria="2" BookingTime="2018-03-01T05:06:18Z"/>
+   </SeriesDataList>
+</GetSeriesReply>
+
+///v2/series_recordings/YY00D4451195
+<?xml version="1.0" encoding="UTF-8"?>
+<GetSeriesReply TotalResults="4">
+   <SeriesDataList>
+      <SeriesData SeriesID="183943" Name="The Andy Griffith Show" Channel="71280" Size="549734000000" IsProtected="true" RecordCriteria="2" BookingTime="2017-06-02T21:03:17Z" MultichannelRecording="0" />
+      <SeriesData SeriesID="183942" Name="Start All Over Again" Channel="68796" Size="72058000000" IsProtected="false" RecordCriteria="2" BookingTime="2017-06-02T21:02:32Z" StartTimeOffset="0" EndTimeOffset="0" MultichannelRecording="0" />
+      <SeriesData SeriesID="343935" Name="Boxeo" Channel="19566" Size="27303000000" IsProtected="false" RecordOnlyNew="false" RecordOnlyLive="false" RecordCriteria="2" BookingTime="2018-03-01T05:06:18Z"/>
+    <SeriesData SeriesID="14914593" Name="Here and Now" Channel="19566" Size="49996000000" IsProtected="false" RecordOnlyNew="false" RecordOnlyLive="false" RecordCriteria="2" BookingTime="2018-03-01T05:06:04Z"/>
+   </SeriesDataList>
+</GetSeriesReply>
+
+///v2/series_recordings/4E654T010208
+<?xml version="1.0" encoding="UTF-8"?>
+<GetSeriesReply TotalResults="0">
+   <SeriesDataList />
+
+
+</GetSeriesReply>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Event_Recordings
+/v2/subscribers/recordings/1GH33X051536
+<?xml version="1.0" encoding="UTF-8"?>
+<GetSubscriberRecordingsListReply TotalResults="6">
+   <Recording ShowingID="AUTO_18718SH02338813000015035940000001502455890563" Channel="18718" ChannelCallLetter="BETSOUL" ShowStartTime="2017-08-24T17:00:00Z" ShowEndTime="2017-08-24T18:00:00Z" StartTime="2017-08-24T17:26:40Z" EndTime="2017-08-24T18:00:00Z" BookingTime="2017-08-24T17:26:40Z" IsProtected="false" AlreadyWatched="false" BeingWatched="false" Progress="0">
+      <ProgramInfo ProgramID="SH023388130000" Name="The Soul Player" SeriesID="310315" SeriesName="The Soul Player" Description="Music videos." Type="Program" />
+      <ABRDetails Size="1024000000" Duration="PT33M20S" State="5" Error="HTTP 473: Program already scheduled" />
+   </Recording>
+   <Recording ShowingID="AUTO_19566MV01072684000015198768000001518789178157" Channel="19566" ChannelCallLetter="HBOHDP" ShowStartTime="2018-03-01T04:00:00Z" ShowEndTime="2018-03-01T05:30:00Z" StartTime="2018-03-01T05:04:33Z" EndTime="2018-03-01T05:30:00Z" BookingTime="2018-03-01T05:04:33Z" IsProtected="false" AlreadyWatched="false" BeingWatched="false" Progress="100">
+      <ProgramInfo ProgramID="MV010726840000" Name="Notes From the Field" Description="Anna Deavere Smith's portrayal of 18 real-life characters dramatizes the accounts of students, parents, teachers and administrators who are caught up in America's school-to-prison pipeline." Year="2018" Type="Program" />
+      <ABRDetails Size="2644000000" Duration="PT25M23S" State="4" />
+   </Recording>
+   <Recording ShowingID="AUTO_19566EP02838861000315199716000001518876000824" Channel="19566" ChannelCallLetter="HBOHDP" ShowStartTime="2018-03-02T06:20:00Z" ShowEndTime="2018-03-02T07:20:00Z" StartTime="2018-03-02T06:20:00Z" EndTime="2018-03-02T07:20:00Z" BookingTime="2018-03-01T05:06:04Z" IsProtected="false" AlreadyWatched="false" BeingWatched="false" Progress="100">
+      <ProgramInfo ProgramID="EP028388610003" Name="Here and Now" SeasonID="14947209" SeriesID="14914593" SeriesName="Here and Now" Rating="12" Description="The Bayer-Boatwrights of Portland, Ore., appear to be a model family, made up of members from different countries and backgrounds, reflecting the multicultural potential of the country. Philosophy professor Greg and his wife, former therapist-turned-school consultant Audrey, have three adopted children -- from Liberia, Vietnam and Colombia -- and a biological daughter, the youngest at 17. As Greg approaches a milestone birthday, serious domestic issues begin to emerge that threaten to ruin the family's very way of life, forcing Greg and Audrey to hire Dr. Farid Shokrani, a Muslim psychiatrist who has demons of his own. The darkly comic series is created by Emmy and Oscar winner Alan Ball" EpisodeNumber="3" EpisodeTitle="If a Deer S... in the Woods" Type="Series" />
+      <ABRDetails Size="6250000000" Duration="PT59M57S" State="4" />
+   </Recording>
+   <Recording ShowingID="AUTO_19566EP02844465005115201435000001519048258729" Channel="19566" ChannelCallLetter="HBOHDP" ShowStartTime="2018-03-04T06:05:00Z" ShowEndTime="2018-03-04T08:20:00Z" StartTime="2018-03-04T06:05:00Z" EndTime="2018-03-04T08:20:00Z" BookingTime="2018-03-01T05:06:18Z" IsProtected="false" AlreadyWatched="false" BeingWatched="false" Progress="100">
+      <ProgramInfo ProgramID="EP028444650051" Name="Boxing" SeriesID="343935" SeriesName="Boxeo" Rating="TVPG" Description="Sergey Kovalev (31-2-1, 27 KOs) takes on Igor Mikhalkin (21-1, 9 KOs) in the 12-round light heavyweight title bout; from New York. Also: Sullivan Barrera vs. Dmitry Bivol, light heavyweights, 12 rounds." Type="Series" />
+      <ABRDetails Size="14057000000" Duration="PT02H14M56S" State="4" />
+   </Recording>
+   <Recording ShowingID="AUTO_19566EP02844465016715255864000001524487844886" Channel="19566" ChannelCallLetter="HBOHDP" ShowStartTime="2018-05-06T06:00:00Z" ShowEndTime="2018-05-06T08:15:00Z" StartTime="2018-05-06T06:00:00Z" EndTime="2018-05-06T08:15:00Z" BookingTime="2018-04-23T13:19:56Z" IsProtected="false" AlreadyWatched="false" BeingWatched="false" Progress="0">
+      <ProgramInfo ProgramID="EP028444650167" Name="Boxing" SeriesID="343935" SeriesName="Boxeo" Rating="TVPG" Description="The unbeaten WBA, WBC and IBF middleweight champ Gennady Golovkin (37-0-1, 33 KOs) will defend his titles against Vanes Martirosyan (36-3-1, 23 KOs). From Carson, Calif." Type="Series" />
+      <ABRDetails Size="13246000000" Duration="PT02H15M00S" State="1" />
+   </Recording>
+   <Recording ShowingID="AUTO_59615EP00385190012115240636000001522932738575" Channel="59615" ChannelCallLetter="FREFMHD" ShowStartTime="2018-04-18T15:00:00Z" ShowEndTime="2018-04-30T16:00:00Z" StartTime="2018-04-30T15:00:00Z" EndTime="2018-04-30T16:00:00Z" BookingTime="2018-04-05T12:59:40Z" IsProtected="false" AlreadyWatched="false" BeingWatched="false" Progress="0">
+      <ProgramInfo ProgramID="EP003851900121" Name="Gilmore Girls" SeasonID="7894446" SeriesID="184655" SeriesName="Gilmore Girls" Rating="6" Description="Set in a storybook Connecticut town populated by an eclectic mix of dreamers, artists and everyday folk, this multigenerational drama about family and friendship centers around Lorelai Gilmore and her daughter, Rory. Lorelai owns the town's bed-and-breakfast, the Dragonfly Inn, with best friend/chef Sookie, and contends with weekly dinners with eccentric, well-off parents Richard and Emily Gilmore (who always have something to say about their daughter's life). After high school, Rory attends Yale University but frequently returns to Stars Hollow to visit her mom." EpisodeNumber="3" EpisodeTitle="The UnGraduate" Type="Series" />
+      <ABRDetails Size="4803000000" Duration="PT01H00M00S" State="1" />
+   </Recording>
+</GetSubscriberRecordingsListReply>
+
+
+/v2/subscribers/recordings/4E654G009851
+<?xml version="1.0" encoding="UTF-8"?>
+<GetSubscriberRecordingsListReply TotalResults="5">
+   <Recording ShowingID="AUTO_68796EP00115131023615239916000001522846996514" Channel="68796" ChannelCallLetter="POPHD" ShowStartTime="2018-04-30T23:00:00Z" ShowEndTime="2018-05-01T00:00:00Z" StartTime="2018-04-30T23:00:00Z" EndTime="2018-05-01T00:00:00Z" BookingTime="2018-04-05T11:22:42Z" IsProtected="false" AlreadyWatched="false" BeingWatched="false" Progress="0">
+      <ProgramInfo ProgramID="SH000044220000" Name="ER" SeasonID="7891891" SeriesID="183904" SeriesName="ER" Rating="8+" Description="Set in Chicago, this medical drama deals with the personal and professional crises of the doctors in the emergency room at County General Hospital. From the exciting to the mundane, a day in the frantic hospital serves up many interesting dilemmas as well as heartrending choices for everyone on staff." EpisodeNumber="2" EpisodeTitle="Damaged" Type="Series" />
+      <ABRDetails Size="5016000000" Duration="PT01H07M00S" State="1" />
+   </Recording>
+   <Recording ShowingID="AUTO_59355EP02757470000115232122000001522068776106" Channel="59355" ChannelCallLetter="HBO2PHD" ShowStartTime="2018-04-08T18:30:00Z" ShowEndTime="2018-04-08T19:30:00Z" StartTime="2018-04-08T18:30:00Z" EndTime="2018-04-08T19:30:00Z" BookingTime="2018-03-26T13:50:25Z" IsProtected="false" AlreadyWatched="false" BeingWatched="false" Progress="100">
+      <ProgramInfo ProgramID="EP027574700001" Name="2 Dope Queens" SeasonID="14986311" SeriesID="14450289" SeriesName="2 Dope Queens" Rating="18+" Description="Jessica Williams and Phoebe Robinson -- described as hilarious and socially aware at the same time -- bring their hit comedy podcast to HBO for a series of hourlong specials. Each has a theme that is built around a main guest -- in N.Y." EpisodeNumber="1" EpisodeTitle="New York" Type="Series" />
+      <ABRDetails Size="5128000000" Duration="PT59M57S" State="4" />
+   </Recording>
+   <Recording ShowingID="AUTO_19566EP02844465016715255864000001524487844886" Channel="19566" ChannelCallLetter="HBOHDP" ShowStartTime="2018-05-06T06:00:00Z" ShowEndTime="2018-05-06T08:15:00Z" StartTime="2018-05-06T06:00:00Z" EndTime="2018-05-06T08:15:00Z" BookingTime="2018-04-23T13:19:56Z" IsProtected="false" AlreadyWatched="false" BeingWatched="false" Progress="0">
+      <ProgramInfo ProgramID="EP028444650167" Name="Boxing" SeriesID="343935" SeriesName="Boxeo" Rating="TVPG" Description="The unbeaten WBA, WBC and IBF middleweight champ Gennady Golovkin (37-0-1, 33 KOs) will defend his titles against Vanes Martirosyan (36-3-1, 23 KOs). From Carson, Calif." Type="Series" />
+      <ABRDetails Size="13246000000" Duration="PT02H15M00S" State="1" />
+   </Recording>
+   <Recording ShowingID="AUTO_59355EP02757470000415198804000001518789165650" Channel="59355" ChannelCallLetter="HBO2PHD" ShowStartTime="2018-03-01T05:00:00Z" ShowEndTime="2018-03-01T06:00:00Z" StartTime="2018-03-01T05:04:41Z" EndTime="2018-03-01T06:00:00Z" BookingTime="2018-03-01T05:04:41Z" IsProtected="false" AlreadyWatched="false" BeingWatched="false" Progress="100">
+      <ProgramInfo ProgramID="EP027574700004" Name="2 Dope Queens" SeasonID="14986311" SeriesID="14450289" SeriesName="2 Dope Queens" Rating="TVMA" Description="Jessica Williams and Phoebe Robinson -- described as hilarious and socially aware at the same time -- bring their hit comedy podcast to HBO for a series of hourlong specials. Each has a theme that is built around a main guest -- in  example, Jon Stewart shares memories of living in the city, and Jessica and Phoebe test his pizza knowledge -- plus showcases some of the ladies' favorite stand-up comics. Other guests include Uzo Aduba, Sarah Jessica Parker and Tituss Burgess. The shows are taped in front of a studio audience at Kings Theatre in Brooklyn, N.Y." EpisodeNumber="4" EpisodeTitle="Black Nerds (aka Blerds)" Type="Series" />
+      <ABRDetails Size="4728000000" Duration="PT55M15S" State="4" />
+   </Recording>
+   <Recording ShowingID="AUTO_68796EP00115131013815216588000001520517005415" Channel="68796" ChannelCallLetter="POPHD" ShowStartTime="2018-03-21T19:00:00Z" ShowEndTime="2018-03-21T20:00:00Z" StartTime="2018-03-21T19:00:00Z" EndTime="2018-03-21T20:00:00Z" BookingTime="2018-03-09T01:59:25Z" IsProtected="false" AlreadyWatched="false" BeingWatched="false" Progress="100">
+      <ProgramInfo ProgramID="EP001151310138" Name="ER" SeasonID="7891887" SeriesID="183942" SeriesName="ER" Rating="TVPG" Description="Set in Chicago, this medical drama deals with the personal and professional crises of the doctors in the emergency room at County General Hospital. From the exciting to the mundane, a day in the frantic hospital serves up many interesting dilemmas as well as heartrending choices for everyone on staff." EpisodeNumber="1" EpisodeTitle="Homecoming" Type="Series" />
+      <ABRDetails Size="4802000000" Duration="PT59M57S" State="4" />
+   </Recording>
+</GetSubscriberRecordingsListReply>
+
+
+
+/v2/subscribers/recordings/YY00D4451195
+<?xml version="1.0" encoding="UTF-8"?>
+<GetSubscriberRecordingsListReply TotalResults="0" />
+
+
+/v2/subscribers/recordings/4E654T010208
+<?xml version="1.0" encoding="UTF-8"?>
+<GetSubscriberRecordingsListReply TotalResults="3">
+   <Recording ShowingID="AUTO_18718SH02338813000015035940000001502455890563" Channel="18718" ChannelCallLetter="BETSOUL" ShowStartTime="2017-08-24T17:00:00Z" ShowEndTime="2017-08-24T18:00:00Z" StartTime="2017-08-24T17:26:40Z" EndTime="2017-08-24T18:00:00Z" BookingTime="2017-08-24T17:26:40Z" IsProtected="false" AlreadyWatched="false" BeingWatched="false" Progress="0">
+      <ProgramInfo ProgramID="SH023388130000" Name="The Soul Player" SeriesID="310315" SeriesName="The Soul Player" Description="Music videos." Type="Program" />
+      <ABRDetails Size="1024000000" Duration="PT33M20S" State="5" Error="HTTP 473: Program already scheduled" />
+   </Recording>
+   <Recording ShowingID="AUTO_59355EP02757470000415198804000001518789165650" Channel="59355" ChannelCallLetter="HBO2PHD" ShowStartTime="2018-03-01T05:00:00Z" ShowEndTime="2018-03-01T06:00:00Z" StartTime="2018-03-01T05:04:41Z" EndTime="2018-03-01T06:00:00Z" BookingTime="2018-03-01T05:04:41Z" IsProtected="false" AlreadyWatched="false" BeingWatched="false" Progress="100">
+      <ProgramInfo ProgramID="EP027574700004" Name="2 Dope Queens" SeasonID="14986311" SeriesID="14450289" SeriesName="2 Dope Queens" Rating="TVMA" Description="Jessica Williams and Phoebe Robinson -- described as hilarious and socially aware at the same time -- bring their hit comedy podcast to HBO for a series of hourlong specials. Each has a theme that is built around a main guest -- on Stewart shares memories of living in the city, and Jessica and Phoebe test his pizza knowledge -- plus showcases some of the ladies' favorite stand-up comics. Other guests include Uzo Aduba, Sarah Jessica Parker and Tituss Burgess. The shows are taped in front of a studio audience at Kings Theatre in Brooklyn, N.Y." EpisodeNumber="4" EpisodeTitle="Black Nerds (aka Blerds)" Type="Series" />
+      <ABRDetails Size="4728000000" Duration="PT55M15S" State="4" />
+   </Recording>
+   <Recording ShowingID="AUTO_59948MV00765654000015035931000001502455895075" Channel="59948" ChannelCallLetter="ACMAXHD" ShowStartTime="2017-08-24T16:45:00Z" ShowEndTime="2017-08-24T18:40:00Z" StartTime="2017-08-24T18:20:20Z" EndTime="2017-08-24T18:40:00Z" BookingTime="2017-08-24T18:20:20Z" IsProtected="false" AlreadyWatched="false" BeingWatched="false" Progress="0">
+      <ProgramInfo ProgramID="MV007656540000" Name="Midnight Special" Description="He's not like us." Year="2016" Type="Program" />
+      <ABRDetails Size="1930000000" Duration="PT19M40S" State="5" Error="HTTP 473: Program already scheduled" />
+   </Recording>
+   <Recording ShowingID="AUTO_59615EP00385190012115240636000001522932738575" Channel="59615" ChannelCallLetter="FREFMHD" ShowStartTime="2018-04-30T15:00:00Z" ShowEndTime="2018-04-30T16:00:00Z" StartTime="2018-04-30T15:00:00Z" EndTime="2018-04-30T16:00:00Z" BookingTime="2018-04-05T12:59:40Z" IsProtected="false" AlreadyWatched="false" BeingWatched="false" Progress="0">
+      <ProgramInfo ProgramID="EP003851900121" Name="Gilmore Girls" SeasonID="7894446" SeriesID="184655" SeriesName="Gilmore Girls" Rating="6" Description="Set in a storybook Connecticut town populated by an eclectic mix of dreamers, artists and everyday folk, this multigenerational drama about family and friendship centers around Lorelai Gilmore and her daughter, Rory. Lorelai owns the town's bed-and-breakfast, the Dragonfly Inn, with best friend/chef Sookie, and contends with weekly dinners with eccentric, well-off parents Richard and Emily Gilmore (who always have something to say about their daughter's life). After high school, Rory attends Yale University but frequently returns to Stars Hollow to visit her mom." EpisodeNumber="3" EpisodeTitle="The UnGraduate" Type="Series" />
+      <ABRDetails Size="4803000000" Duration="PT01H00M00S" State="1" />
+   </Recording>
+</GetSubscriberRecordingsListReply>
+
+
+
+
+
+//extra
+<?xml version="1.0" encoding="UTF-8"?>
+<GetSubscriberRecordingsListReply TotalResults="101">
+   <Recording ShowingID="AUTO_59615EP00385190011915236352000001522501449596" Channel="59615" ChannelCallLetter="FREFMHD" ShowStartTime="2018-04-13T16:00:00Z" ShowEndTime="2018-04-13T17:00:00Z" StartTime="2018-04-13T16:00:00Z" EndTime="2018-04-13T17:00:00Z" BookingTime="2018-03-31T20:12:07Z" IsProtected="false" AlreadyWatched="false" BeingWatched="false" Progress="0">
+      <ProgramInfo ProgramID="EP003851900119" Name="Gilmore Girls" SeasonID="7894446" SeriesID="184655" SeriesName="Gilmore Girls" Rating="PG" Description="Set in a storybook Connecticut town populated by an eclectic mix of dreamers, artists and everyday folk, this multigenerational drama about family and friendship centers around Lorelai Gilmore and her daughter, Rory. Lorelai owns the town's bed-and-breakfast, the Dragonfly Inn, with best friend/chef Sookie, and contends with weekly dinners with eccentric, well-off parents Richard and Emily Gilmore (who always have something to say about their daughter's life). After high school, Rory attends Yale University but frequently returns to Stars Hollow to visit her mom." EpisodeNumber="1" EpisodeTitle="New and Improved Lorelai" Type="Series" />
+      <ABRDetails Size="4803000000" Duration="PT01H00M00S" State="1" />
+   </Recording>
+   <Recording ShowingID="AUTO_20373EP01739816007615236892000001522587086725" Channel="20373" ChannelCallLetter="WPIXDT" ShowStartTime="2018-04-14T07:00:00Z" ShowEndTime="2018-04-14T07:30:00Z" StartTime="2018-04-14T07:00:00Z" EndTime="2018-04-14T07:30:00Z" BookingTime="2018-04-01T15:00:07Z" IsProtected="false" AlreadyWatched="false" BeingWatched="false" Progress="0">
+      <ProgramInfo ProgramID="EP017398160076" Name="Mom" SeasonID="12912863" SeriesID="9978206" SeriesName="Mom" Rating="TV14" Description="Single mom Christy has her hands full with two children, Violet and Roscoe, and maintaining newfound sobriety, when her passive-aggressive, recovering-alcoholic mother re-enters the picture, brimming with criticisms about Christy's life. As the daughter works to be the best mother she can and to overcome mistakes she made, she must also navigate dysfunctional relationships with romantic interests, and with her irresponsible ex-husband, Baxter. Despite the uphill battle, Christy tries to remain positive and stay on a path to help her reach her goals." EpisodeNumber="9" EpisodeTitle="Bad Hand and British Royalty" Type="Series" />
+      <ABRDetails Size="2944000000" Duration="PT30M00S" State="1" />
+   </Recording>
+</GetSubscriberRecordingsListReply>
+
+
+I am creating separte endpoints     
+migrate/subscribers for migrating subsubcribers
+
+
+{
+	Successlist:[
+		{	
+id:"Ashfaq",
+Status: 200
+},
+	{	
+id:"Ashfaq",
+Status: 200
+}
+],
+failedlist:[
+{
+      "status": 400,
+      "validationErrors": [
+        "Field ncsServiceIds is missing .",
+        "Field 'id' is missing."
+      ]
+    },
+	{
+      "status": 400,
+      "validationErrors": [
+        "Field ncsServiceIds is missing .",
+        "Field 'id' is missing."
+      ]
+    }
+]
+}
+[
+{
+  "responses": [
+    {
+      "status": 400,
+      "validationErrors": [
+        "Field ncsServiceIds is missing .",
+        "Field 'id' is missing."
+      ]
+    }
+  ]
+},
+{
+  "responses": [
+    {
+      "id": "string",
+      "uri": "/sms/v3/subscribers/string",
+      "status": 200
+    }
+  ]
+}
+]
